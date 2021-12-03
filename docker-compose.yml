@@ -1,0 +1,11 @@
+version: "3"
+services:
+  app:
+    build:
+      context: ./php
+      # PHP用dockerfileの配置パス
+      dockerfile: .
+    ports:
+      - "8010:80"
+    volumes:
+      - ./src:/var/www/html
